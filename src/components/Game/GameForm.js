@@ -26,7 +26,7 @@ export default class GameForm extends Component {
     addGame(event){
         event.preventDefault();
         console.log(this.state.name);
-        let  id = (this.state.id === "")? Math.floor(Math.random() * 100):this.state.id;
+        let  id = (this.state.id === "")? Math.floor(Math.random() * 100).toString():this.state.id;
 
         let game =  {
             id: id,
@@ -53,7 +53,7 @@ export default class GameForm extends Component {
 
     render() {
 
-        console.log(this.props.game)
+        //console.log(this.props.game)
         return (
             <div className="container">
                 <h2>Add Game</h2>
